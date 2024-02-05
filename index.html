@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sanabil cafe</title>
     <style>
-
-body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://i.pinimg.com/originals/a6/3d/46/a63d462685a63f8aa42ec02dbafc0b1c.gif'); /* Replace 'background.jpg' with the path to your image */
+            background-image: url('https://i.pinimg.com/originals/a6/3d/46/a63d462685a63f8aa42ec02dbafc0b1c.gif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -18,7 +17,7 @@ body {
         }
 
         footer {
-            background-color: #131921; /* Your desired footer color */
+            background-color: #131921;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -26,6 +25,7 @@ body {
             bottom: 0;
             width: 100%;
         }
+
         header {
             background-color: #131921;
             color: #fff;
@@ -36,21 +36,15 @@ body {
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
         }
 
         .logo {
-            height: auto; /* Allow the height to adjust automatically based on the width */
-            width: 100px; /* Set a fixed width for consistency */
+            height: auto;
+            width: 110px; /* Adjusted logo size */
         }
 
         nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             margin-top: 10px;
         }
 
@@ -58,46 +52,36 @@ body {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
+            margin: 0 10px;
         }
 
         .search-bar {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 4px;
-            overflow: hidden;
-            flex-grow: 1;
             margin-top: 10px;
+           
         }
 
-        .search-input {
-            border: none;
+        .search-input, .search-btn {
+            width: 100%;
             padding: 10px;
-            flex: 1;
-        }
-
-        .search-btn {
-            background-color: #febd69; /* Amazon's search button color */
-            color: #131921;
-            border: none;
-            padding: 10px 15px; /* Adjust padding for a larger button */
-            cursor: pointer;
+            box-sizing: border-box;
         }
 
         .products-container {
             max-width: 1200px;
             margin: 20px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .product-card {
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
+            width: calc(50% - 20px); /* 2 products per line in mobile view */
+            margin-bottom: 20px;
         }
 
         .product-image {
@@ -105,35 +89,30 @@ body {
             border-radius: 4px;
         }
 
-        @media only screen and (max-width: 600px) {
+        .russian_lag {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1d1d1d;
+        }
+
+        @media only screen and (min-width: 600px) {
             .container {
-                flex-direction: column;
-                align-items: stretch;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
 
-            nav {
+            nav, .search-bar {
+                width: 40%;
+            }
+
+            .products-container {
                 width: 100%;
-                margin-top: 10px;
+                justify-content: space-around;
             }
 
-            .search-bar {
-                width: 100%;
-                margin-top: 10px;
+            .product-card {
+                width: calc(20% - 20px); /* 5 products per line in computer view */
             }
-
-            .search-input {
-                width: calc(100% - 40px); /* Adjust as needed */
-            }
-
-            .search-btn {
-                width: 40px; /* Adjust as needed */
-            }
-
-            .russian_lag {
-                font-family: Arial, Helvetica, sans-serif;
-                color: #1d1d1d;
-            }
-
         }
     </style>
 </head>
@@ -147,7 +126,6 @@ body {
                 <a href="#">Home</a>
                 <a href="#">Shop</a>
                 <a href="#">Categories</a>
-                <a href="#"></a>
             </nav>
 
             <div class="search-bar">
@@ -158,9 +136,7 @@ body {
     </header>
 
     <div class="products-container">
-
-        <!-- 1 -->
-
+      
         <div class="product-card">
             <img class="product-image" src="https://spicyzest.com/NorthRichlandHills/wp-content/uploads/2021/10/sri-lankan-cutlet.jpg" alt="Product 1">
             <p>1</p>
@@ -957,16 +933,11 @@ body {
 
 
 
-
-
-
-
-        <!-- Add more product cards as needed -->
     </div>
-    <footer class="footer" style="align-items: center;">
+
+    <footer class="footer">
         <p>&copy; 2024 sanabil cafe - powered by Sanabil cafe</p>
     </footer>
-    <!-- Additional content goes here -->
 
 </body>
 </html>
