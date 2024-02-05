@@ -54,17 +54,32 @@
             font-weight: bold;
             margin: 0 10px;
         }
-
         .search-bar {
-            margin-top: 10px;
-           
-        }
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    max-width: 300px; /* Set a maximum width for the search bar */
+    margin: 0 auto; /* Center the search bar */
+}
 
-        .search-input, .search-btn {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+.search-input {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    width: calc(100% - 40px); /* Adjust as needed */
+}
+
+.search-btn {
+    background-color: #febd69;
+    color: #131921;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
 
         .products-container {
             max-width: 1200px;
